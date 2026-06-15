@@ -2,57 +2,91 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: black;
-  color: white;
   overflow: hidden;
+  color: white;
 }
 
 .bg {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, #1a0000, #000);
+  background: radial-gradient(circle, #200000, #000);
   z-index: -1;
 }
 
-.container {
-  text-align: center;
-  margin-top: 80px;
+/* CENTER LAYOUT */
+.vault-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
 }
 
-.title {
-  font-size: 48px;
+/* VAULT DOOR */
+.vault-door {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin-bottom: 30px;
+}
+
+/* LEFT + RIGHT DOORS */
+.left-door, .right-door {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(145deg, #111, #000);
+  border: 3px solid red;
+  box-shadow: 0 0 25px red inset, 0 0 20px red;
+  transition: transform 2s ease;
+}
+
+/* split in half */
+.left-door {
+  left: 0;
+  border-right: 1px solid red;
+}
+
+.right-door {
+  right: 0;
+  border-left: 1px solid red;
+}
+
+/* OPEN STATE */
+.open .left-door {
+  transform: translateX(-120%) rotateY(-40deg);
+}
+
+.open .right-door {
+  transform: translateX(120%) rotateY(40deg);
+}
+
+/* CONTENT */
+.content {
+  text-align: center;
+}
+
+h1 {
   color: red;
   text-shadow: 0 0 20px red;
+  letter-spacing: 3px;
 }
 
-.subtitle {
+p {
   color: #aaa;
-  margin-bottom: 40px;
-}
-
-.vault {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.wheel {
-  width: 120px;
-  height: 120px;
-  border: 6px solid red;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  animation: spin 3s linear infinite;
 }
 
 button {
-  padding: 12px 24px;
+  margin-top: 15px;
+  padding: 12px 25px;
   background: red;
   border: none;
   color: white;
-  font-weight: bold;
   cursor: pointer;
   box-shadow: 0 0 15px red;
+  font-weight: bold;
 }
 
 button:hover {
@@ -60,11 +94,6 @@ button:hover {
 }
 
 #status {
-  margin-top: 20px;
+  margin-top: 15px;
   color: white;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
