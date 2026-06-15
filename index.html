@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>LifhVault</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -10,16 +10,22 @@
 
 <div class="bg"></div>
 
-<div class="container">
-  <h1 class="title">LIFHVAULT</h1>
-  <p class="subtitle">Purchase to dominate</p>
+<div class="vault-wrapper">
 
-  <div class="vault">
-    <div class="wheel" id="wheel"></div>
-    <button onclick="unlockVault()">UNLOCK VAULT</button>
+  <div class="vault-door" id="door">
+    <div class="left-door"></div>
+    <div class="right-door"></div>
   </div>
 
-  <div id="status"></div>
+  <div class="content">
+    <h1>LIFHVAULT</h1>
+    <p>Purchase to dominate</p>
+
+    <button onclick="unlockVault()">UNLOCK VAULT</button>
+
+    <div id="status"></div>
+  </div>
+
 </div>
 
 <script src="script.js"></script>
