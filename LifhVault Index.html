@@ -4,63 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LifhVault</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="bg"></div>
 
-<!-- VAULT SCREEN -->
-<div id="vaultScreen" class="vault-screen">
-  <div class="vault-box">
-    <h1 class="logo">LIFHVAULT</h1>
-    <p class="subtitle">Open the vaultk</p>
+  <!-- VAULT ENTRY SCREEN -->
+  <div id="entryScreen" class="center">
+    <div class="vault-box">
+      <h1 class="title">LIFHVAULT</h1>
+      <p class="subtitle">Purchase to dominate</p>
 
-    <div class="wheel-container">
-      <div id="wheel" class="wheel"></div>
+      <div class="wheel-container">
+        <div class="wheel" id="wheel"></div>
+      </div>
+
+      <button onclick="enterVault()" class="enter-btn">
+        UNLOCK VAULT
+      </button>
     </div>
-
-    <button class="unlock-btn" onclick="unlockVault()">
-      UNLOCK
-    </button>
   </div>
-</div>
 
-<!-- MAIN SITE -->
-<div id="mainSite" class="main hidden">
+  <!-- MAIN SITE -->
+  <div id="mainSite" class="hidden">
+    <header>
+      <h1>LIFHVAULT</h1>
+      <p class="glow">Elite Script Marketplace</p>
+    </header>
 
-  <header>
-    <h1>LIFHVAULT</h1>
-    <p class="tagline">Purchase to dominate</p>
-  </header>
+    <section class="panel">
+      <h2>Access Panel</h2>
+      <p>Open a ticket in Discord to purchase access.</p>
 
-  <section class="grid">
-
-    <div class="card">
-      <h2>Premium Scripts</h2>
-      <p>High-performance tools and utilities built for precision.</p>
-    </div>
-
-    <div class="card">
-      <h2>Secure Access</h2>
-      <p>Everything is locked behind verification and purchase.</p>
-    </div>
-
-    <div class="card discord">
-      <h2>https://discord.gg/8ffj6BeHmC</h2>
-
-      <!-- Replace with your server ID -->
-      <iframe
-        src="https://discord.com/widget?id=https://discord.gg/8ffj6BeHmCD&theme=dark"
+      <iframe 
+        src="https://discord.com/widget?id=YOUR_SERVER_ID&theme=dark"
+        width="100%"
+        height="400"
         allowtransparency="true"
         frameborder="0">
       </iframe>
 
-    </div>
+      <a class="buy-btn" href="https://discord.com" target="_blank">
+        JOIN DISCORD
+      </a>
+    </section>
+  </div>
 
-  </section>
-
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
